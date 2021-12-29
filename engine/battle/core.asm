@@ -831,6 +831,11 @@ FaintEnemyPokemon:
 	inc hl
 	dec b
 	jr nz, .halveExpDataLoop
+	
+	;new stuff here
+	ld a, [wEnemyMonBaseExp]
+	ld [wUnusedCF8D], a ; or another location in WRAM that isn't being used right now
+	; end new stuff
 
 ; give exp (divided evenly) to the mons that actually fought in battle against the enemy mon that has fainted
 ; if exp all is in the bag, this will be only be half of the stat exp and normal exp, due to the above loop
@@ -844,6 +849,12 @@ FaintEnemyPokemon:
 ; the player has exp all
 ; now, set the gain exp flag for every party member
 ; half of the total stat exp and normal exp will divided evenly amongst every party member
+	
+	;more new stuff here
+	ld a, [wUnusedCF8D]
+	ld [wEnemyMonBaseExp], a
+	;end more new stuff
+	
 	ld a, $1
 	ld [wBoostExpByExpAll], a
 	ld a, [wPartyCount]
