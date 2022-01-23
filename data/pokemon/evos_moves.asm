@@ -202,8 +202,9 @@ RhydonEvosMoves:
 	db 30, STOMP
 	db 35, TAIL_WHIP
 	db 40, FURY_ATTACK
-	db 48, HORN_DRILL
-	db 55, LEER
+	db 48, LEER
+	db 55, HORN_DRILL
+	db 59, ROCK_SLIDE
 	db 64, TAKE_DOWN
 	db 0
 
@@ -308,7 +309,10 @@ ExeggutorEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 5, CONFUSION
 	db 28, STOMP
+	db 35, EGG_BOMB
+	db 44, SOLARBEAM
 	db 0
 
 LickitungEvosMoves:
@@ -318,6 +322,7 @@ LickitungEvosMoves:
 	db 7, STOMP
 	db 15, DISABLE
 	db 23, DEFENSE_CURL
+	db 26, LICK
 	db 31, SLAM
 	db 39, SCREECH
 	db 0
@@ -398,6 +403,7 @@ RhyhornEvosMoves:
 	db 30, STOMP
 	db 35, TAIL_WHIP
 	db 40, FURY_ATTACK
+	db 43, ROCK_SLIDE
 	db 45, HORN_DRILL
 	db 50, LEER
 	db 55, TAKE_DOWN
